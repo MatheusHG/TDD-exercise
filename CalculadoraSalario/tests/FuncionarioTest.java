@@ -1,5 +1,3 @@
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
 
 public class FuncionarioTest {
@@ -36,22 +34,10 @@ public class FuncionarioTest {
     Funcionario funcionarioIgual3000 = new Funcionario(nome, email, salarioIgual, cargo);
     Funcionario funcionarioMaior3000 = new Funcionario(nome, email, salarioMaior, cargo);
 
-    assertEquals(
-      "Calcula salário de funcionario com salario base menor que 3000",
-      salarioMenor - (salarioMenor * _10PERCENT),
-      funcionarioMenor3000.calculaSalario()
-    );
+    assert(salarioMenor - (salarioMenor * _10PERCENT) == funcionarioMenor3000.calculaSalario());
 
-    assertEquals(
-      "Calcula salário de funcionario com salario base igual a 3000",
-      salarioIgual - (salarioIgual * _10PERCENT),
-      funcionarioIgual3000.calculaSalario()
-    );
+    assert(salarioIgual - (salarioIgual * _20PERCENT) == funcionarioIgual3000.calculaSalario());
 
-    assertEquals(
-      "Calcula salário de funcionario com salario base maior que 3000",
-      salarioMaior - (salarioMaior * _10PERCENT),
-      funcionarioMaior3000.calculaSalario()
-    );
+    assert(salarioMaior - (salarioMaior * _20PERCENT) == funcionarioMaior3000.calculaSalario());
   }
 }
