@@ -7,7 +7,7 @@ public class FuncionarioTest {
     String nome = "André";
     String email = "andre.martins@ccc.ufcg.edu.br";
     double salarioBase = 3000.00;
-    Cargo cargo = "DESENVOLVEDOR";
+    Cargo cargo = Cargo.DESENVOLVEDOR;
     
     Funcionario funcionario = new Funcionario(nome, email, salarioBase, cargo);
 
