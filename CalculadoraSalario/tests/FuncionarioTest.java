@@ -58,8 +58,6 @@ public class FuncionarioTest {
     Funcionario funcionarioIgual = new Funcionario(nome, email, salarioIgual, cargo);
     Funcionario funcionarioMaior = new Funcionario(nome, email, salarioMaior, cargo);
 
-    System.out.println(funcionarioMenor.calculaSalario());
-
     assert(salarioMenorComDescontoMenor == funcionarioMenor.calculaSalario());
     assert(salarioIgualComDescontoMaior == funcionarioIgual.calculaSalario());
     assert(salarioMaiorComDescontoMaior == funcionarioMaior.calculaSalario());
