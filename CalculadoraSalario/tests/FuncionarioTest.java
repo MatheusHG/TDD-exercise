@@ -1,7 +1,6 @@
 import org.junit.Test;
 
 public class FuncionarioTest {
-
   @Test
   public void testCriarUmFuncionario() {
     String nome = "André";
@@ -9,11 +8,11 @@ public class FuncionarioTest {
     double salarioBase = 3000.00;
     String cargo = "DESENVOLVEDOR";
     
-    Funcionario funcionario = new Funcionario();
+    Funcionario funcionario = new Funcionario(nome, email, salarioBase, cargo);
 
-    assertEquals(nome, funcionario.getNome())
-    assertEquals(email, funcionario.getEmail())
-    assertEquals(salarioBase, funcionario.getSalarioBase())
-    assertEquals(cargo, funcionario.getCargo())
+    assertEquals(nome, funcionario.getNome());
+    assertEquals(email, funcionario.getEmail());
+    assertEquals(salarioBase, funcionario.getSalarioBase());
+    assertEquals(cargo, funcionario.getCargo());
   }
 }
