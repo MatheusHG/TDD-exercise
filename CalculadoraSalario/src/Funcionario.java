@@ -27,4 +27,9 @@ public class Funcionario {
   public Cargo getCargo() {
     return this.cargo;
   }
+
+  public double calculaSalario() {
+    if(this.salarioBase >= 3000) return this.salarioBase - (this.salarioBase * 0.2);
+    return this.salarioBase - (this.salarioBase * 0.1);
+  }
 }
