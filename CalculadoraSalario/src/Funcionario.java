@@ -31,4 +31,9 @@ public class Funcionario {
   public double calculaSalario() {
     return (this.salarioBase - this.cargo.calculaDesconto(this.salarioBase));
   }
+
+  @Override
+  public String toString() {
+    return "Funcionário: " + this.nome + " - Salário Bruto: R$" + this.salarioBase + " - Salário Líquido: R$" + this.calculaSalario(); 
+  }
 }
