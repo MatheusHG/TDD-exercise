@@ -28,4 +28,23 @@ public class SMTPTest {
         Bill bill = new Bill("Matheus Oliveira", "Rua do Sol, 89", ServiceType.CONSULTING, 1000.0);
         this.notaFiscal = new NotaFiscal(bill);
     }
+
+    @After
+    public void restoreStreams() {
+        System.setOut(originalOut);
+    }
+
+    @Test
+    public void shouldHaveNoErrorsOnSend() {
+        SMTP smtp = new SMTP();
+        smtp.send(notaFiscal);
+
+        assertEquals("Sending customer invoice Matheus Oliveira by email...\n", outContent.toString());
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowExceptionOnNullNotaFiscal() {
+        SMTP smtp = new SMTP();
+        smtp.send(null);
+    }
 }
