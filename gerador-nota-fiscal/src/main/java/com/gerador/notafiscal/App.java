@@ -1,18 +1,5 @@
 package com.gerador.notafiscal;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-    }
-}
-package com.gerador.notafiscal;
-
 
 import com.gerador.notafiscal.controllers.InvoiceController;
 import com.gerador.notafiscal.models.NotaFiscal;
